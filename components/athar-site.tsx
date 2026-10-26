@@ -49,7 +49,7 @@ function Header({lang,setLang,page}:{lang:Lang;setLang:(l:Lang)=>void;page:Page}
   const [open,setOpen]=useState(false);
   const [searchOpen,setSearchOpen]=useState(false);
   return <header className="site-header"><div className="container nav-shell">
-    <a className="brand" href="/"><span className="brand-mark"/><span>أثر</span></a>
+    <a className="brand brand-image" href="/" aria-label={lang==="ar"?"أثر — الرئيسية":"Athar — Home"}><img className="brand-logo" src="/athar_logo.jpeg" alt="أثر | ATHAR"/></a>
     <nav className="main-nav" aria-label={lang==="ar"?"التنقل الرئيسي":"Main navigation"}>
       <a className={`nav-link ${page==="home"?"active":""}`} href="/">{t.home}</a>
       <a className={`nav-link ${page==="tours"?"active":""}`} href="/tours">{t.tours}</a>
@@ -62,7 +62,7 @@ function Header({lang,setLang,page}:{lang:Lang;setLang:(l:Lang)=>void;page:Page}
 }
 
 function Footer({lang,notify}:{lang:Lang;notify:(s:string)=>void}){return <footer id="footer" className="site-footer"><div className="container"><div className="footer-grid">
-  <div className="footer-brand"><div className="brand"><span className="brand-mark"/><span>أثر</span></div><p>{lang==="ar"?"اكتشف عُمان... اترك أثراً":"Discover Oman. Leave a lasting trace."}</p></div>
+  <div className="footer-brand"><a className="brand brand-image" href="/" aria-label={lang==="ar"?"أثر — الرئيسية":"Athar — Home"}><img className="brand-logo" src="/athar_logo.jpeg" alt="أثر | ATHAR"/></a><p>{lang==="ar"?"اكتشف عُمان... اترك أثراً":"Discover Oman. Leave a lasting trace."}</p></div>
   <div className="footer-col"><h3>{lang==="ar"?"روابط سريعة":"Quick links"}</h3><a href="/">{copy[lang].home}</a><a href="/tours">{copy[lang].tours}</a><a href="/guides">{copy[lang].guides}</a><a href="/about">{copy[lang].about}</a></div>
   <div className="footer-col"><h3>{lang==="ar"?"تواصل معنا":"Contact us"}</h3><p>{lang==="ar"?"مسقط، سلطنة عُمان":"Muscat, Sultanate of Oman"}</p><p>+968 2400 0000</p><p>hello@athar.om</p></div>
   <div className="footer-col"><h3>{lang==="ar"?"اشترك في نشرتنا البريدية":"Join our newsletter"}</h3><p>{lang==="ar"?"عروض مختارة وحكايات جديدة من عُمان.":"Curated journeys and new stories from Oman."}</p><div className="newsletter"><input aria-label="البريد الإلكتروني" placeholder={lang==="ar"?"البريد الإلكتروني":"Email address"}/><button onClick={()=>notify(lang==="ar"?"تم الاشتراك بنجاح":"Subscribed successfully")}>{lang==="ar"?"اشترك":"Join"}</button></div></div>
