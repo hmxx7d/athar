@@ -9,16 +9,24 @@ type Page = "home" | "tours" | "guides" | "guide-apply" | "destination" | "booki
 type Lang = "ar" | "en";
 
 const IMG = {
-  castle: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=88",
-  mountain: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=88",
-  beach: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=88",
-  waterfall: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=88",
+  castle: "/images/oman/wakan-mountain-village.jpeg",
+  mountain: "/images/oman/khasab-harbour.jpeg",
+  beach: "/images/oman/daymaniyat-islands.jpeg",
+  waterfall: "/images/oman/salalah-khareef-road.jpeg",
   desert: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=88",
-  mosque: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1600&q=88",
-  village: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=88",
+  mosque: "/images/oman/muttrah-corniche.jpeg",
+  village: "/images/oman/misfat-al-abriyeen.jpeg",
   guide1: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
   guide2: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85",
   guide3: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85",
+  misfat: "/images/oman/misfat-al-abriyeen.jpeg",
+  salalah: "/images/oman/salalah-khareef-road.jpeg",
+  muttrah: "/images/oman/muttrah-corniche.jpeg",
+  wakan: "/images/oman/wakan-mountain-village.jpeg",
+  musandamRoad: "/images/oman/musandam-coastal-road.jpeg",
+  daymaniyat: "/images/oman/daymaniyat-islands.jpeg",
+  nizwaFort: "/images/oman/nizwa-fort.jpeg",
+  khasabHarbour: "/images/oman/khasab-harbour.jpeg",
 };
 
 const copy = {
@@ -27,19 +35,19 @@ const copy = {
 };
 
 const tourData = [
-  {img:IMG.mosque, ar:"جولة في مسقط القديمة", en:"Old Muscat discovery", price:35, days:"نصف يوم", daysEn:"Half day", location:"مسقط", locationEn:"Muscat", category:"culture"},
-  {img:IMG.beach, ar:"استكشاف سواحل وجزر عُمان", en:"Oman's coasts & islands", price:60, days:"يوم كامل", daysEn:"Full day", location:"مسندم", locationEn:"Musandam", category:"sea"},
-  {img:IMG.waterfall, ar:"رحلة وادي دربات وخريف صلالة", en:"Wadi Darbat & Salalah", price:45, days:"يوم كامل", daysEn:"Full day", location:"ظفار", locationEn:"Dhofar", category:"nature"},
-  {img:IMG.village, ar:"تعرف على قرية تراثية", en:"Heritage village journey", price:40, days:"نصف يوم", daysEn:"Half day", location:"نزوى", locationEn:"Nizwa", category:"culture"},
-  {img:IMG.beach, ar:"رحلة إلى جزيرة مصيرة", en:"Masirah island escape", price:55, days:"يومان", daysEn:"2 days", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"sea"},
-  {img:IMG.desert, ar:"مغامرة جبال الحجر", en:"Al Hajar mountain adventure", price:70, days:"يومان", daysEn:"2 days", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"adventure"},
-  {img:IMG.waterfall, ar:"مغامرة وادي شاب والبرك الفيروزية", en:"Wadi Shab turquoise pools", price:48, days:"يوم كامل", daysEn:"Full day", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
-  {img:IMG.beach, ar:"محمية السلاحف في رأس الجنز", en:"Ras Al Jinz turtle reserve", price:65, days:"مساء وليلة", daysEn:"Evening & night", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
-  {img:IMG.waterfall, ar:"وادي بني خالد والكهوف الطبيعية", en:"Wadi Bani Khalid & caves", price:50, days:"يوم كامل", daysEn:"Full day", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
-  {img:IMG.beach, ar:"غوص وجزر الديمانيات", en:"Daymaniyat Islands snorkelling", price:75, days:"يوم كامل", daysEn:"Full day", location:"جنوب الباطنة", locationEn:"South Al Batinah", category:"sea"},
-  {img:IMG.castle, ar:"حصن نخل والعيون الحارة", en:"Nakhal Fort & hot springs", price:38, days:"نصف يوم", daysEn:"Half day", location:"جنوب الباطنة", locationEn:"South Al Batinah", category:"culture"},
-  {img:IMG.village, ar:"مسفاة العبريين وكهف الهوتة", en:"Misfat Al Abriyeen & Al Hoota Cave", price:58, days:"يوم كامل", daysEn:"Full day", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"adventure"},
-  {img:IMG.castle, ar:"حصنا بهلاء وجبرين", en:"Bahla Fort & Jabreen Castle", price:42, days:"يوم كامل", daysEn:"Full day", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"culture"},
+  {img:IMG.muttrah, ar:"جولة في مسقط القديمة", en:"Old Muscat discovery", price:35, days:"نصف يوم", daysEn:"Half day", location:"مسقط", locationEn:"Muscat", category:"culture"},
+  {img:IMG.khasabHarbour, ar:"استكشاف سواحل وجزر عُمان", en:"Oman's coasts & islands", price:60, days:"يوم كامل", daysEn:"Full day", location:"مسندم", locationEn:"Musandam", category:"sea"},
+  {img:IMG.salalah, ar:"رحلة وادي دربات وخريف صلالة", en:"Wadi Darbat & Salalah", price:45, days:"يوم كامل", daysEn:"Full day", location:"ظفار", locationEn:"Dhofar", category:"nature"},
+  {img:IMG.misfat, ar:"تعرف على قرية تراثية", en:"Heritage village journey", price:40, days:"نصف يوم", daysEn:"Half day", location:"نزوى", locationEn:"Nizwa", category:"culture"},
+  {img:IMG.daymaniyat, ar:"رحلة إلى جزيرة مصيرة", en:"Masirah island escape", price:55, days:"يومان", daysEn:"2 days", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"sea"},
+  {img:IMG.wakan, ar:"مغامرة جبال الحجر", en:"Al Hajar mountain adventure", price:70, days:"يومان", daysEn:"2 days", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"adventure"},
+  {img:IMG.musandamRoad, ar:"مغامرة وادي شاب والبرك الفيروزية", en:"Wadi Shab turquoise pools", price:48, days:"يوم كامل", daysEn:"Full day", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
+  {img:IMG.daymaniyat, ar:"محمية السلاحف في رأس الجنز", en:"Ras Al Jinz turtle reserve", price:65, days:"مساء وليلة", daysEn:"Evening & night", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
+  {img:IMG.musandamRoad, ar:"وادي بني خالد والكهوف الطبيعية", en:"Wadi Bani Khalid & caves", price:50, days:"يوم كامل", daysEn:"Full day", location:"الشرقية", locationEn:"Ash Sharqiyah", category:"nature"},
+  {img:IMG.daymaniyat, ar:"غوص وجزر الديمانيات", en:"Daymaniyat Islands snorkelling", price:75, days:"يوم كامل", daysEn:"Full day", location:"جنوب الباطنة", locationEn:"South Al Batinah", category:"sea"},
+  {img:IMG.nizwaFort, ar:"حصن نخل والعيون الحارة", en:"Nakhal Fort & hot springs", price:38, days:"نصف يوم", daysEn:"Half day", location:"جنوب الباطنة", locationEn:"South Al Batinah", category:"culture"},
+  {img:IMG.misfat, ar:"مسفاة العبريين وكهف الهوتة", en:"Misfat Al Abriyeen & Al Hoota Cave", price:58, days:"يوم كامل", daysEn:"Full day", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"adventure"},
+  {img:IMG.nizwaFort, ar:"حصنا بهلاء وجبرين", en:"Bahla Fort & Jabreen Castle", price:42, days:"يوم كامل", daysEn:"Full day", location:"الداخلية", locationEn:"Ad Dakhiliyah", category:"culture"},
   {img:IMG.desert, ar:"تخييم ومراقبة النجوم في الربع الخالي", en:"Empty Quarter camp & stargazing", price:95, days:"يومان", daysEn:"2 days", location:"ظفار", locationEn:"Dhofar", category:"adventure"},
 ];
 
