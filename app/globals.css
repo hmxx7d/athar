@@ -31,6 +31,8 @@
 .tab.active{color:var(--maroon);border-bottom-color:var(--gold)}
 .amenity,.included-list li{color:var(--maroon);background:var(--ivory)}
 .payment-option.selected{border-color:var(--gold);background:#f6ead7}
+.payment-option{cursor:pointer;transition:border-color .2s,background .2s,transform .2s}.payment-option input{accent-color:var(--maroon)}.apple-pay-option{justify-content:center;min-height:54px;background:#111;color:#fff;border-color:#111;font-size:14px}.apple-pay-option:hover{transform:translateY(-1px);background:#000}.apple-pay-option.selected{background:#000;color:#fff;border-color:var(--gold);box-shadow:0 0 0 2px rgba(189,135,56,.2)}.apple-pay-option strong{font-size:19px;letter-spacing:-.02em}.apple-pay-option input{accent-color:#fff}
+.booking-layout>form{width:100%;min-width:0}
 .site-footer{background:#263f32}.footer-col a,.footer-col p{color:#dfd3bd}.copyright{color:#bea985}.newsletter button{background:var(--gold-soft);color:#3e261e}
 .toast{background:var(--maroon)}
 .section.alt{background:#efe3cf}
